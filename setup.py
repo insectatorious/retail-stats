@@ -10,7 +10,7 @@ setuptools.setup(
   author="Sumanas Sarma",
   author_email="insectatorious+pypi@gmail.com",
   keywords="price-elasticity cross-elasticity sales-analysis",
-  description="A simple way to calculate retail stats",
+  description="A simple library to calculate price elasticity, cross elasticity",
   long_description=long_description,
   long_description_content_type="text/markdown",
   install_requires=[
