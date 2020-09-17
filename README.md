@@ -9,11 +9,10 @@ products whose sales and prices are provided.
 
 Metrics currently available:
 
-1. Price Elasticity (_In Progress_)
-2. Cross Elasticity (**Complete**)
+ 1. Price Elasticity (_In Progress_)
+ 2. Cross Elasticity (**Complete**)
 
 ## Calculations
-
 
 ### Cross Elasticity
 From [Wikipedia](https://en.wikipedia.org/wiki/Cross_elasticity_of_demand), 
@@ -22,7 +21,7 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Cross_elasticity_of_demand),
 
 This can be seen written using the formula:
 
-```
+```text
 Percentage Change in Quantity Sold of Product B
 -------------------------------------------------
 Percentage Change in Price Charged for Product A
