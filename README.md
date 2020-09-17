@@ -1,6 +1,8 @@
 # Retail Stats
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/63c5fafac4ed4af59e10c88538d3d7ef)](https://app.codacy.com/manual/insectatorious/retail-stats?utm_source=github.com&utm_medium=referral&utm_content=insectatorious/retail-stats&utm_campaign=Badge_Grade_Dashboard)
+[![Build Status](https://travis-ci.org/insectatorious/retail-stats.svg?branch=master)](https://travis-ci.org/insectatorious/retail-stats)
+[![Coverage Status](https://coveralls.io/repos/github/insectatorious/retail-stats/badge.svg?branch=master)](https://coveralls.io/github/insectatorious/retail-stats?branch=master)
 
 This repository contains code to calculate various values used in retail for 
 products whose sales and prices are provided.
