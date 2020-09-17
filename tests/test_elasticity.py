@@ -127,15 +127,13 @@ def test_all_cross_elasticities():
   original_prices = [prc_a[0], prc_b[0], prc_c[0], prc_d[0]]
   new_prices = [prc_a[1], prc_b[1], prc_c[1], prc_d[1]]
 
-  """
-  Cross Elasticities between pairs A,B and C,D
-  
-    | A | B | C | D 
-  A |   |   |   |
-  B |   |   |   | 
-  C |   |   |   | 
-  D |   |   |   |
-  """
+  # Cross Elasticities between pairs A,B and C,D
+  #
+  #   | A | B | C | D
+  # A |   |   |   |
+  # B |   |   |   |
+  # C |   |   |   |
+  # D |   |   |   |
 
   ceds = get_all_cross_elasticities(original_quantities=original_quantities,
                                     new_quantities=new_quantities,
