@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
   long_description = fh.read()
 
 setuptools.setup(
-  name="example-pkg-izmty",  # Replace with your own username
-  version="0.0.2",
+  name="retail-stats",
+  version="0.0.1",
   author="Sumanas Sarma",
   author_email="insectatorious+pypi@gmail.com",
   keywords="price-elasticity cross-elasticity sales-analysis",
