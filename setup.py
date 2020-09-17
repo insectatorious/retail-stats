@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="retail-stats",
-  version="0.0.post1",
+  version="0.0.2",
   author="Sumanas Sarma",
   author_email="insectatorious+pypi@gmail.com",
   keywords="price-elasticity cross-elasticity sales-analysis",
