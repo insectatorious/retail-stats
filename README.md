@@ -1,5 +1,7 @@
 # Retail Stats
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/63c5fafac4ed4af59e10c88538d3d7ef)](https://app.codacy.com/manual/insectatorious/retail-stats?utm_source=github.com&utm_medium=referral&utm_content=insectatorious/retail-stats&utm_campaign=Badge_Grade_Dashboard)
+
 This repository contains code to calculate various values used in retail for 
 products whose sales and prices are provided.
 
