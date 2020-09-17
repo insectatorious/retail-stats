@@ -6,7 +6,6 @@ def calculate_cross_elasticity(original_quantities: object,
                                new_quantities: object,
                                original_prices: object,
                                new_prices: object) -> np.ndarray:
-
   """Calculate cross elasticity of two items.
 
   Pass in single values (for a single pair of products) or arrays where
@@ -117,7 +116,6 @@ def get_all_cross_elasticities(original_quantities,
                                new_quantities,
                                original_prices,
                                new_prices):
-
   """Calculate cross elasticities for all products against each other.
 
   For example, given 5 products, this function will calculate the cross
