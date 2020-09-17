@@ -6,13 +6,16 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="retail-stats",
-  version="0.0.1",
+  version="0.0.post1",
   author="Sumanas Sarma",
   author_email="insectatorious+pypi@gmail.com",
   keywords="price-elasticity cross-elasticity sales-analysis",
   description="A simple way to calculate retail stats",
   long_description=long_description,
   long_description_content_type="text/markdown",
+  install_requires=[
+    "numpy~=1.19"
+  ],
   url="https://github.com/insectatorious/retail-stats",
   packages=setuptools.find_packages(),
   classifiers=[
