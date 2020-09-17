@@ -12,6 +12,14 @@ Metrics currently available:
  1. Price Elasticity (_In Progress_)
  2. Cross Elasticity (**Complete**)
 
+## Installation
+
+Install from PyPi.
+
+```commandline
+pip install retail-stats
+```
+
 ## Calculations
 
 ### Cross Elasticity
@@ -28,6 +36,10 @@ Percentage Change in Price Charged for Product A
 ``` 
 
 The implementation is a direct copy of the formula. 
+
+```python
+from retail_stats.elasticity import calculate_cross_elasticity
+```
 
 #### Calculate Cross Elasticity for a single pair of products
 ```python
