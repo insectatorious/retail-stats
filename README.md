@@ -3,6 +3,10 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/63c5fafac4ed4af59e10c88538d3d7ef)](https://app.codacy.com/manual/insectatorious/retail-stats?utm_source=github.com&utm_medium=referral&utm_content=insectatorious/retail-stats&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/insectatorious/retail-stats.svg?branch=master)](https://travis-ci.org/insectatorious/retail-stats)
 [![Coverage Status](https://coveralls.io/repos/github/insectatorious/retail-stats/badge.svg?branch=master)](https://coveralls.io/github/insectatorious/retail-stats?branch=master)
+[![PyPI version shields.io](https://img.shields.io/pypi/v/retail-stats.svg)](https://pypi.python.org/pypi/retail-stats/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/retail-stats.svg)](https://pypi.python.org/pypi/retail-stats/)
+[![PyPI license](https://img.shields.io/pypi/l/retail-stats.svg)](https://pypi.python.org/pypi/retail-stats/)
+
 
 This repository contains code to calculate various values used in retail for 
 products whose sales and prices are provided.
@@ -110,3 +114,14 @@ assert isclose(ceds[np.argwhere(skus == "C"), np.argwhere(skus == "A")], 1)
 assert isclose(ceds[np.argwhere(skus == "A"), np.argwhere(skus == "C")], 9)
 
 ```
+
+## Performance
+
+#### Core elasticity function
+
+| Number of Products |  Time in Seconds
+| ------------------ | ----------------- | 
+| 1,000              | 0.065512 
+| 10,000             | 0.200022 
+| 100,000            | 1.727269 
+| 1,000,000          | 26.730988 
