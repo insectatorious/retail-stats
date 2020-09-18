@@ -16,6 +16,10 @@ Metrics currently available:
  1. Price Elasticity (_In Progress_)
  2. Cross Elasticity (**Complete**)
 
+These simple, almost naive, implementations are taken from the Wikipedia 
+definitions of the metrics. All performance benefits are from the work of 
+Numpy. The purpose of this repository is to provide some convenience functions.
+
 ## Installation
 
 Install from PyPi.
