@@ -25,7 +25,8 @@ setuptools.setup(
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
     "Development Status :: 3 - Alpha",
-    "Topic :: Office/Business"
+    "Topic :: Office/Business",
+    "Topic :: Office/Business :: Financial"
   ],
   python_requires='>=3.7',
 )
