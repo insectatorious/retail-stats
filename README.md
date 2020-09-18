@@ -28,6 +28,16 @@ Install from PyPi.
 pip install retail-stats
 ```
 
+If installing outside of a `[virtualenv]()` then use `--user` to avoid permission 
+issues:
+```commandline
+pip install --user retail-stats
+```
+
+### Dependencies
+
+1. `numpy~=1.19`
+
 ## Calculations
 
 ### Cross Elasticity
