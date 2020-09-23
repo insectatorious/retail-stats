@@ -2,10 +2,10 @@
 import numpy as np
 
 
-def calculate_cross_elasticity(original_quantities: object,
-                               new_quantities: object,
-                               original_prices: object,
-                               new_prices: object) -> np.ndarray:
+def calculate_cross_elasticity(original_quantities_related_product: object,
+                               new_quantities_related_product: object,
+                               original_prices_main_product: object,
+                               new_prices_main_product: object) -> np.ndarray:
   """Calculate cross elasticity of two items.
 
   Pass in single values (for a single pair of products) or arrays where
@@ -27,10 +27,10 @@ def calculate_cross_elasticity(original_quantities: object,
 
   The cross elasticity can be calculated by executing:
 
-    calculate_cross_elasticity(original_quantities=200,
-                               new_quantities=400,
-                               original_prices=1000,
-                               new_prices=1050)
+    calculate_cross_elasticity(original_quantities_related_product=200,
+                               new_quantities_related_product=400,
+                               original_prices_main_product=1000,
+                               new_prices_main_product=1050)
 
   which will return a value of approx `13.67`.
 
@@ -50,18 +50,18 @@ def calculate_cross_elasticity(original_quantities: object,
 
   Their cross elasticities can be calculated as a batch using:
 
-    calculate_cross_elasticity(original_quantities=[200, 1000],
-                               new_quantities=[400, 1100],
-                               original_prices=[1000, 100],
-                               new_prices=[1050, 80])
+    calculate_cross_elasticity(original_quantities_related_product=[200, 1000],
+                               new_quantities_related_product=[400, 1100],
+                               original_prices_main_product=[1000, 100],
+                               new_prices_main_product=[1050, 80])
 
   which will return an array `[13.667, -0.429]`.
 
   Args:
-    original_quantities: numpy array or scalar value of original quantity sold
-    new_quantities: numpy array or scalar value of the new quantity sold
-    original_prices: numpy array or scalar value of the original price
-    new_prices: numpy array or scalar value of the new price
+    original_quantities_related_product: numpy array or scalar value of original quantity sold
+    new_quantities_related_product: numpy array or scalar value of the new quantity sold
+    original_prices_main_product: numpy array or scalar value of the original price
+    new_prices_main_product: numpy array or scalar value of the new price
 
   Returns:
     np.ndarray: shape (M,) where M is len(original_quantity) storing cross
@@ -69,35 +69,35 @@ def calculate_cross_elasticity(original_quantities: object,
 
   """
 
-  if not isinstance(original_quantities, np.ndarray):
-    original_quantities = np.asarray([original_quantities])
+  if not isinstance(original_quantities_related_product, np.ndarray):
+    original_quantities_related_product = np.asarray([original_quantities_related_product])
 
-  if not isinstance(new_quantities, np.ndarray):
-    new_quantities = np.asarray([new_quantities])
+  if not isinstance(new_quantities_related_product, np.ndarray):
+    new_quantities_related_product = np.asarray([new_quantities_related_product])
 
-  if not isinstance(original_prices, np.ndarray):
-    original_prices = np.asarray([original_prices])
+  if not isinstance(original_prices_main_product, np.ndarray):
+    original_prices_main_product = np.asarray([original_prices_main_product])
 
-  if not isinstance(new_prices, np.ndarray):
-    new_prices = np.asarray([new_prices])
+  if not isinstance(new_prices_main_product, np.ndarray):
+    new_prices_main_product = np.asarray([new_prices_main_product])
 
-  __check_shape_of_arrays(original_quantities,
-                          new_quantities,
-                          original_prices,
-                          new_prices)
+  __check_shape_of_arrays(original_quantities_related_product,
+                          new_quantities_related_product,
+                          original_prices_main_product,
+                          new_prices_main_product)
 
-  cross_elasticity = __cross_elasticity_calc(new_prices,
-                                             new_quantities,
-                                             original_prices,
-                                             original_quantities)
+  cross_elasticity = __calculate_elasticity(new_prices_main_product,
+                                            new_quantities_related_product,
+                                            original_prices_main_product,
+                                            original_quantities_related_product)
 
   return cross_elasticity
 
 
-def __cross_elasticity_calc(new_prices,
-                            new_quantities,
-                            original_prices,
-                            original_quantities):
+def __calculate_elasticity(new_prices,
+                           new_quantities,
+                           original_prices,
+                           original_quantities):
 
   quantity_base_value = np.mean([original_quantities, new_quantities], axis=0)
   price_base_value = np.mean([original_prices, new_prices], axis=0)
@@ -162,9 +162,10 @@ def get_all_cross_elasticities(original_quantities,
   ceds = np.zeros((num_skus, num_skus), dtype=np.float32)
 
   for i in np.arange(num_skus):
-    ceds[i] = calculate_cross_elasticity(original_quantities=np.repeat(original_quantities[i], num_skus),
-                                         new_quantities=np.repeat(new_quantities[i], num_skus),
-                                         original_prices=original_prices, new_prices=new_prices)
+    ceds[i] = calculate_cross_elasticity(
+      original_quantities_related_product=np.repeat(original_quantities[i], num_skus),
+      new_quantities_related_product=np.repeat(new_quantities[i], num_skus),
+      original_prices_main_product=original_prices, new_prices_main_product=new_prices)
 
   return ceds
 

@@ -71,10 +71,7 @@ original_price = 1000
 new_price = 1050
 # (200 / 300) / (50 / 1025)
 expected_ced = 13.66666666666666
-ced = elasticity.calculate_cross_elasticity(original_quantity, 
-                                            new_quantity, 
-                                            original_price, 
-                                            new_price)
+ced = elasticity.calculate_cross_elasticity(original_quantity,new_quantity,original_price,new_price)
 
 assert isclose(expected_ced, ced)
 ```
