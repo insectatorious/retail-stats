@@ -82,7 +82,12 @@ new_quantity = 400
 
 original_price = 1000
 new_price = 1050
-# (200 / 300) / (50 / 1025)
+
+# Cross Elasticity = % Change in Quantity / % Change in Price
+# Change in Quantity = (400 - 200) / ((400 + 200) / 2) = 200 / 300
+# Change in Price = (1050 - 1000) / ((1000 + 1050) / 2) = 50 / 1025
+
+# Cross Elasticity = (200 / 300) / (50 / 1025) = ~13.66
 expected_ced = 13.66666666666666
 ced = elasticity.calculate_cross_elasticity(original_quantity,new_quantity,original_price,new_price)
 
